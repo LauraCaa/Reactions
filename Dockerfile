@@ -1,6 +1,6 @@
 FROM "node"
 WORKDIR /opt/reactions
-COPY .package*.json .
+COPY package*.json .
 RUN npm i
 EXPOSE "3000"
 CMD ["sleep", "infinity"]
