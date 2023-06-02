@@ -1,4 +1,4 @@
-export default function Table(){
+export default function ProductsList(){
     // se crea un array con todos los objetos que necesitamos
     let products = [
         {name:"papas", price: 1500, stock: 5},

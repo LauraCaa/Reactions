@@ -1,9 +1,9 @@
-import styles from './page.module.css'
-import ShoppingCar from '@/components/shopping-car'
-
-export default function page() {
+export default function Home() {
   return (
-    <main className={styles.main}>
-    </main>
+    <>
+      <p>Hello world</p>
+      <p>Hello world</p>
+
+    </>
   )
 }
