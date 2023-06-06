@@ -3,7 +3,6 @@ export default function Home() {
     <>
       <p>Hello world</p>
       <p>Hello world</p>
-
     </>
   )
 }
