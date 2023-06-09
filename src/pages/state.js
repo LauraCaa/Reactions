@@ -4,7 +4,17 @@
 // Importamos la function useState para poder crear nuestros estados.
 import { useState } from "react"
 export default function State(){
- return(
-    <h1> hola </h1>
- )
+   const [city, setCity] = useState('Cali')
+   function reverse(){
+      let reverse_word = city.split('');
+      reverse_word = reverse_word.reverse();
+      reverse_word = reverse_word.join('');
+   }
+
+   return(
+      <>
+         <p>{city}</p>
+         <button onClick={() => reverse()}>reverse string</button>
+      </>
+   )
 } 
