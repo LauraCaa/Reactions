@@ -1,7 +1,7 @@
 export default function ProductsSuggestion(){
     return(
         <>
-            <p>suggestion</p>
+            <h1>suggestion!!!</h1>
         </>
     )
 }
