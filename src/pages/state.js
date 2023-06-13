@@ -4,7 +4,8 @@
 // Importamos la function useState para poder crear nuestros estados.
 import { useState } from "react";
 //importamos componentes desde cualquier archivo para poder usarlo
-import WordSync from "@/components/words/word-sync";
+import WordSync from "@/pages/components/words/word-sync";
+import WordFunction from "@/components/words/word-function";
 import WordRemove from "@/components/words/word-remove";
 export default function State() {
    // The first const has the important value and the second const has a function to update the value inside the first const.
@@ -37,6 +38,7 @@ export default function State() {
          <button onClick={() => reverseWord()}>reverse string</button>
          <WordRemove></WordRemove>
          <WordSync></WordSync>
+         <WordFunction></WordFunction>
       </>
    )
 } 
