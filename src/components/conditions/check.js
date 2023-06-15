@@ -10,7 +10,7 @@ export default function Check(){
             ):(
                 <></>
             )}
-            <input id="check" type="checkbox" value={show} onChange={()=> setShow(!show)}/>
+            <input type="checkbox" value={show} onChange={()=> setShow(!show)}/>
             <label htmlFor="check">Show menssage</label>
         </>
     )

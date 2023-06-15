@@ -24,8 +24,8 @@ export default function Radio(){
             <ul>
                 {users.map((user, index) => (
                 <li key={index}>
-                    <input type="radio" value={user} name="user" onChange={()=> setUser(user)}/>
-                    {user.name}
+                    <input type="radio" value={user} name="user" id={'user-' + index} onChange={()=> setUser(user)}/>
+                    <label htmlFor={'user-' + index}>{user.name}</label>
                 </li>
             ))}
             </ul>
