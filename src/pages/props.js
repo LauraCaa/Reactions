@@ -23,15 +23,13 @@ export default function Props(){
                 size={credential.size}
                 name={credential.name} 
                 country={credential.country}
-                description={credential.description}>
-            </Bio>
+                description={credential.description}></Bio>
             <VIP title="VIP">
             <Card 
                 image={credential.image}
                 size={credential.size}
                 name={credential.name} 
-                country={credential.country}>
-            </Card>
+                country={credential.country}></Card>
             </VIP>
         </>
     )
