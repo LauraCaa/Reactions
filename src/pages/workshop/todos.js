@@ -1,5 +1,5 @@
-import Form from "@/components/toDo/form"
-import Table from "@/components/toDo/table"
+import Form from "@/components/workshop/toDo/form"
+import Table from "@/components/workshop/toDo/table"
 import {useState} from "react"
 export default function Todos(){
     const[todos,setTodos]= useState([
