@@ -25,8 +25,11 @@ export default function New (){
             <form onSubmit={handleSubmit}>
                 <label htmlFor="name">Name</label>
                 <input type="text" id="name" required onChange={(event)=> setUser({...user, name: event.target.value})}/>
-                <label htmlFor="gender">Gender</label>
-                <input type="text" id="gender" required onChange={(event)=> setUser({...user, gender: event.target.value})}/>
+                <select id="gender" onChange={(event)=> setUser ({...user, gender: event.target.value})}>
+                    <option value="" disabled> choose...</option>
+                    <option value="male">male</option>
+                    <option value="female">female</option>
+                </select>
                 <label htmlFor="email">Email</label>
                 <input type="text" id="email" required onChange={(event)=> setUser({...user, email: event.target.value})}/>
                 <label>Status</label>

@@ -14,19 +14,23 @@ export default function Edit(){
         status: ''
     });
 
-    const { id } = useRouter().query;
+    const router  = useRouter();
     useEffect(() => {
-        axios.get('https://gorest.co.in/public/v2/users/' + id)
-        .then ((response) => {
-            setUser(response.data)
-        })
-        .catch((error) => {
-            console.error(error);
-        });
-    }, [])
+        if(router.isReady){
+            const { id } = router.query;
+            axios.get('https://gorest.co.in/public/v2/users/' + id)
+            .then ((response) => {
+                setUser(response.data)
+            })
+            .catch((error) => {
+                console.error(error);
+            });
+        }
+    }, [router.isReady])
 
     function handleSubmit(event) {
         event.preventDefault();
+        const { id } = router.query;
         axios.put('https://gorest.co.in/public/v2/users/' + id, user)
         .then (() => {
             window.location.href = '/workshop/apis';
@@ -40,7 +44,11 @@ export default function Edit(){
                 <label htmlFor="name">Name</label>
                 <input type="text" id="name" required value={user.name} onChange={(event)=> setUser({...user, name: event.target.value})} />
                 <label htmlFor="gender">Gender</label>
-                <input type="text" id="gender" required value={user.gender} onChange={(event)=> setUser({...user, gender: event.target.value})} />
+                <select id="gender" value={user.gender} onChange={(event)=> setUser ({...user, gender: event.target.value})}>
+                    <option value="" disabled> choose...</option>
+                    <option value="male">male</option>
+                    <option value="female">female</option>
+                </select>
                 <label htmlFor="email">Email</label>
                 <input type="text" id="email" required value={user.email} onChange={(event)=> setUser({...user, email: event.target.value})} />
                 <label>Status</label>
