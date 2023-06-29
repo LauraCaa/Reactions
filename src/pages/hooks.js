@@ -3,6 +3,7 @@ import Effects from "@/components/hooks/effects"
 import SimpleEffect from "@/components/hooks/simple-effect"
 import Refs from "@/components/hooks/refs"
 import RefDom from "@/components/hooks/ref-dom"
+import Friends from "@/components/hooks/friends"
 export default function Hooks(){
     return(
         <>
@@ -12,6 +13,7 @@ export default function Hooks(){
             <SimpleEffect></SimpleEffect>
             <Refs></Refs>
             <RefDom></RefDom>
+            <Friends></Friends>
         </>
     )
 }
