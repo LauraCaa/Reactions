@@ -3,10 +3,9 @@ import Login from "@/components/workshop/auth/login"
 
 export default function Index() {
     return(
-        <>
-            <h3>Inicio de sesion</h3>
+        <div class="bg-body-secondary">
             <Login></Login>
-        </>
+        </div>
     )
 }
  
